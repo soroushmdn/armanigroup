@@ -1,0 +1,27 @@
+.brands {
+  .brands__slide {
+    background: var(--container-color);
+    border: 1px solid #dadeee;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .brands__slide:nth-of-type(odd) {
+    margin-top: 1rem;
+  }
+
+  .brands__img {
+    height: 56px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .brands {
+    .brands__slide {
+      padding: 1rem;
+    }
+  }
+}

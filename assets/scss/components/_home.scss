@@ -1,0 +1,151 @@
+.home {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-color-dark);
+  color: var(--text-color-light);
+
+  .home__container {
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+  }
+
+  .home__data {
+    .home__title {
+      color: var(--secondary-color);
+    }
+
+    .home__description {
+      color: var(--text-color-light);
+      margin-bottom: 2rem;
+    }
+
+    .home__button {
+      margin-bottom: 5rem;
+    }
+
+    .home__stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      gap: 2rem;
+
+      .home__stats-box {
+        box-shadow: 0 0 2px var(--secondary-color);
+        padding: 1.2rem;
+        border-radius: 0.5rem;
+
+        h2 {
+          line-height: 1.1;
+          color: var(--title-color-light);
+          font-size: var(--h1-font-size);
+          display: flex;
+          align-items: end;
+          gap: 0.5rem;
+
+          span {
+            color: #d4423e;
+            font-size: var(--h3-font-size);
+          }
+        }
+
+        p {
+          color: var(--text-color-light);
+        }
+      }
+    }
+  }
+
+  .home__img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    align-self: center;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+  }
+
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  // @@@@@@@@@        BACKGROUND         @@@@@@@@@
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  .bg-circle {
+    position: absolute;
+    filter: blur(200px);
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background: var(--primary-color);
+  }
+
+  .bg-circle-1 {
+    bottom: -3rem;
+    right: 0;
+  }
+
+  .bg-circle-2 {
+    top: 10rem;
+    left: 0;
+
+    width: 220px;
+    height: 220px;
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@        BREAKPOINTS        @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: 1440px) {
+  .home {
+    .home__container {
+      gap: 3rem;
+      padding-top: 7.5rem;
+      padding-bottom: 3rem;
+    }
+
+    .home__data {
+      .home__button {
+        margin-bottom: 3rem;
+      }
+    }
+
+    .bg-circle {
+      filter: blur(120px);
+      width: 200px;
+      height: 200px;
+    }
+
+    .bg-circle-2 {
+      top: 3rem;
+      left: -5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home {
+    .home__container {
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home {
+    .home__container {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      padding-top: 7rem;
+      padding-bottom: 3rem;
+    }
+
+    .bg-circle-2 {
+      display: none;
+    }
+  }
+}
