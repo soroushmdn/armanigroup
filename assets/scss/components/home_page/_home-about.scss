@@ -1,0 +1,75 @@
+.home-about {
+  .home-about__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 5rem;
+
+    .data {
+      span {
+        color: var(--secondary-color);
+        font-family: 'semibold';
+        font-size: var(--h5-font-size);
+      }
+
+      h3 {
+        margin-bottom: 1.2rem;
+        text-align: justify;
+      }
+
+      p {
+        text-align: justify;
+      }
+    }
+
+    img {
+      border-radius: 1rem;
+      aspect-ratio: 5/4;
+    }
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@        BREAKPOINTS        @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: 1440px) {
+  .home-about {
+    .home-about__container {
+      gap: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home-about {
+    .home-about__container {
+      gap: 2rem;
+
+      img {
+        object-fit: cover;
+        object-position: center;
+        aspect-ratio: 4/5;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home-about {
+    .home-about__container {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+
+      .data {
+        h3 {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      img {
+        aspect-ratio: 4/3;
+        order: 2;
+      }
+    }
+  }
+}

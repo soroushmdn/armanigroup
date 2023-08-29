@@ -1,0 +1,320 @@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@  FONTS  @@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@font-face {
+  font-family: 'light';
+  src: url(../fonts/Sahel-Light.ttf);
+}
+
+@font-face {
+  font-family: 'regular';
+  src: url(../fonts/Sahel.ttf);
+}
+
+@font-face {
+  font-family: 'semibold';
+  src: url(../fonts/Sahel-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'bold';
+  src: url(../fonts/Sahel-Bold.ttf);
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@  VARIABLES  @@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+:root {
+  // minor third h1-h5
+
+  // --h1-font-size: 3.052rem;
+  --h1-font-size: 2.488rem;
+  // --h2-font-size: 2.441rem;
+  --h2-font-size: 2.074rem;
+  // --h3-font-size: 1.953rem;
+  --h3-font-size: 1.728rem;
+  // --h4-font-size: 1.563rem;
+  --h4-font-size: 1.44rem;
+  // --h5-font-size: 1.25rem;
+  --h5-font-size: 1.2rem;
+  --body-font-size: 1rem;
+  --small-font-size: 0.833rem;
+  --tiny-font-size: 0.694rem;
+
+  --primary-color: #545fa7;
+  --secondary-color: #cb2127;
+  --bg-color: #eceef7;
+  --light-color: #dadeee;
+  --lighter-color: #f8f9fc;
+  --dark-color: #080a1a;
+  --darker-color: #030407;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@@@     BASE    @@@@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'regular';
+}
+
+body {
+  font-size: var(--body-font-size);
+  background: var(--bg-color);
+  color: var(--dark-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'bold';
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: var(--body-font-size);
+}
+
+button {
+  cursor: pointer;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@  REUSABLE CLASSES   @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+.container {
+  max-width: 1264px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+.section {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+
+.button {
+  font-family: 'semibold';
+  background: var(--primary-color);
+  color: var(--light-color);
+  display: inline-block;
+  text-align: center;
+  padding: 0.7rem 1.8rem;
+  border-radius: 0.4rem;
+  transition: background 0.4s;
+}
+
+// .button:hover {
+// }
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+
+  h2 {
+    span {
+      color: var(--secondary-color);
+      font-family: 'bold';
+    }
+  }
+
+  a {
+  }
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@     SCROLL UP      @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+.scrollup {
+  position: fixed;
+  left: 1.5rem;
+  bottom: -30%;
+  z-index: 99;
+  opacity: 0.5;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  i {
+    color: var(--primary-color);
+    font-size: 3rem;
+  }
+}
+
+.scrollup:hover {
+  opacity: 1;
+}
+
+.show-scrollup {
+  bottom: 3rem;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@     SCROLL BAR     @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #dadeee;
+  border-radius: 1rem;
+  margin-block: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b6bddd;
+  border-radius: 1rem;
+  border: 1px solid #dadeee;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a5add5;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@    BREAKPOINTS     @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media (min-width: 3840px) {
+  body {
+    zoom: 2;
+  }
+}
+
+@media (min-width: 2048px) {
+  body {
+    zoom: 1.5;
+  }
+}
+
+@media (max-width: 1440px) {
+  :root {
+    // --h1-font-size: 2.67rem;
+    --h1-font-size: 2.177rem;
+    // --h2-font-size: 2.136rem;
+    --h2-font-size: 1.814rem;
+    // --h3-font-size: 1.708rem;
+    --h3-font-size: 1.511rem;
+    // --h4-font-size: 1.367rem;
+    --h4-font-size: 1.26rem;
+    // --h5-font-size: 1.1rem;
+    --h5-font-size: 1.05rem;
+    --body-font-size: 0.875rem;
+    --small-font-size: 0.7rem;
+    --tiny-font-size: 0.6rem;
+  }
+
+  .container {
+    max-width: 1072px;
+    padding-inline: 1.5rem;
+  }
+
+  .section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .section-title {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --h1-font-size: 1.866rem;
+    --h2-font-size: 1.555rem;
+    --h3-font-size: 1.296rem;
+    --h4-font-size: 1.08rem;
+    --h5-font-size: 0.9rem;
+    --body-font-size: 0.75rem;
+    --small-font-size: 0.6rem;
+    --tiny-font-size: 0.5rem;
+  }
+
+  .container {
+    padding-inline: 1rem;
+  }
+
+  .section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .section-title {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --h1-font-size: 1.555rem;
+    --h2-font-size: 1.296rem;
+    --h3-font-size: 1.08rem;
+    --h4-font-size: 0.9rem;
+    --h5-font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,235 @@
+.home-special {
+  .section-title {
+    justify-content: center;
+
+    h2 {
+      background: var(--light-color);
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+    }
+  }
+
+  .home-special__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 5rem;
+
+    .data {
+      span {
+        color: var(--secondary-color);
+        font-family: 'semibold';
+        font-size: var(--h5-font-size);
+      }
+
+      h3 {
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        text-align: justify;
+        margin-bottom: 2rem;
+      }
+
+      ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+
+        li {
+          background: var(--primary-color);
+          padding: 1rem 1.3rem;
+          border-radius: 0.5rem;
+          display: grid;
+          grid-template-columns: max-content 1fr;
+          align-items: center;
+          gap: 0.7rem;
+
+          .icon {
+            background: var(--lighter-color);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+
+            svg {
+            }
+          }
+
+          span {
+            color: var(--light-color);
+            font-family: 'regular';
+            font-size: var(--body-font-size);
+            // white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    figure {
+      position: relative;
+
+      img {
+        aspect-ratio: 4/3;
+        display: flex;
+        border-radius: 1rem;
+      }
+
+      .box {
+        position: absolute;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        background: var(--lighter-color);
+        background: hsla(225, 40%, 98%, 0.2);
+        backdrop-filter: blur(8px);
+
+        h4 {
+          color: var(--secondary-color);
+        }
+
+        span {
+        }
+      }
+
+      .top {
+        top: 0;
+        right: 5rem;
+        transform: translateY(-50%);
+      }
+
+      .bottom {
+        bottom: 0;
+        left: 5rem;
+        transform: translateY(50%);
+      }
+    }
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@        BREAKPOINTS        @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: 1440px) {
+  .home-special {
+    .home-special__container {
+      gap: 3rem;
+
+      .data {
+        p {
+          margin-bottom: 1.5rem;
+        }
+
+        ul {
+          gap: 1rem;
+          margin-bottom: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home-special {
+    .home-special__container {
+      gap: 2rem;
+
+      .data {
+        p {
+          margin-bottom: 1.3rem;
+        }
+
+        ul {
+          margin-bottom: 2rem;
+
+          li {
+            padding: 0.8rem;
+
+            .icon {
+              width: 32px;
+              height: 32px;
+
+              svg {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      figure {
+        img {
+          aspect-ratio: 3/4;
+        }
+
+        .top {
+          right: 3rem;
+        }
+
+        .bottom {
+          left: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home-special {
+    .home-special__container {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+
+      figure {
+        img {
+          aspect-ratio: 4/3;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-special {
+    .home-special__container {
+      gap: 3rem;
+
+      .data {
+        p {
+          margin-bottom: 1.1rem;
+        }
+
+        ul {
+          margin-bottom: 1.6rem;
+          gap: 0.6rem;
+
+          li {
+            .icon {
+              width: 28px;
+              height: 28px;
+
+              svg {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      figure {
+        .top {
+          right: 2rem;
+        }
+
+        .bottom {
+          left: 2rem;
+        }
+      }
+    }
+  }
+}

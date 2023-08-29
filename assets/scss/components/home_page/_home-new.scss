@@ -1,0 +1,114 @@
+.home-new {
+  .home-new__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    .card {
+      background: #838ec3;
+      overflow: hidden;
+      border-radius: 1rem;
+      display: grid;
+
+      img {
+        // aspect-ratio: 1/1;
+      }
+
+      .info {
+        background: var(--lighter-color);
+        padding: 1.2rem 1.5rem;
+        display: grid;
+        gap: 0.7rem;
+
+        h5 {
+          // text-align: center;
+        }
+
+        a {
+          padding: 0.5rem 0.8rem;
+          font-size: var(--small-font-size);
+        }
+      }
+    }
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@        BREAKPOINTS        @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: 1440px) {
+  .home-new {
+    .home-new__container {
+      gap: 1.5rem;
+
+      .card {
+        .info {
+          padding: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home-new {
+    .home-new__container {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+      grid-auto-columns: 35%;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+
+      .card {
+        img {
+          justify-self: center;
+          width: 250px;
+          height: 250px;
+        }
+      }
+    }
+
+    .home-new__container::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home-new {
+    .home-new__container {
+      gap: 1rem;
+      grid-auto-columns: 40%;
+
+      .card {
+        img {
+          width: 200px;
+          height: 200px;
+        }
+
+        .info {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-new {
+    .home-new__container {
+      grid-auto-columns: 50%;
+
+      .card {
+        img {
+          width: 160px;
+          height: 160px;
+        }
+
+        .info {
+          padding: 0.8rem;
+        }
+      }
+    }
+  }
+}
