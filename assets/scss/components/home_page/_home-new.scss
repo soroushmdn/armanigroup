@@ -1,0 +1,147 @@
+.home-new {
+  .home-new__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    .card {
+      box-shadow: 0 0 20px var(--primary-color-tint-10);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      display: grid;
+      justify-items: center;
+
+      figure {
+        position: relative;
+        padding: 2rem;
+
+        .name {
+          position: absolute;
+          z-index: 1;
+          inset: 0;
+          margin: auto;
+          width: max-content;
+          height: max-content;
+          display: grid;
+          padding: 0.5rem;
+          border-radius: 0.4rem;
+
+          background: radial-gradient(
+            100% 100% at 50% 0%,
+            #a5add5 60%,
+            #838ec3 100%
+          );
+
+          background: var(--primary-color-tint-7);
+          box-shadow: 0 0 2px var(--primary-color-tint-4);
+
+          span {
+            line-height: 1;
+            text-align: center;
+            font-family: 'english';
+            font-size: var(--small-font-size);
+          }
+        }
+
+        img {
+          width: 120px;
+          filter: drop-shadow(0 0 5px var(--primary-color-tint-8));
+        }
+      }
+
+      .info {
+        width: 100%;
+        background: var(--primary-color-tint-10);
+        padding: 1.2rem 1.5rem;
+        display: grid;
+        gap: 0.7rem;
+
+        h5 {
+          text-align: center;
+        }
+
+        a {
+          font-size: var(--small-font-size);
+        }
+      }
+    }
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@        BREAKPOINTS        @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: 1440px) {
+  .home-new {
+    .home-new__container {
+      gap: 1.5rem;
+
+      .card {
+        .info {
+          padding: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home-new {
+    .home-new__container {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+      grid-auto-columns: 35%;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+
+      .card {
+        box-shadow: 0 0 10px var(--primary-color-tint-10);
+
+        figure {
+          padding: 1.5rem;
+        }
+      }
+    }
+
+    .home-new__container::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home-new {
+    .home-new__container {
+      gap: 1rem;
+      grid-auto-columns: 40%;
+
+      .card {
+        figure {
+          padding: 1rem;
+
+          img {
+            width: 100px;
+          }
+        }
+
+        .info {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-new {
+    .home-new__container {
+      grid-auto-columns: 60%;
+
+      .card {
+        .info {
+          padding: 0.8rem;
+        }
+      }
+    }
+  }
+}
