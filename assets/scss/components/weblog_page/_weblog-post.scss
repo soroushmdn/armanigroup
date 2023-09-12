@@ -1,0 +1,140 @@
+.weblog-post {
+  padding-block: 2.5rem;
+
+  .weblog-post__container {
+    display: grid;
+    gap: 2rem;
+
+    .title {
+      h2 {
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+
+        .date,
+        .time {
+          display: flex;
+          align-items: baseline;
+          gap: 0.5rem;
+
+          span {
+            color: var(--primary-color);
+            font-size: var(--small-font-size);
+          }
+
+          .right {
+            .icon {
+              display: none;
+            }
+          }
+        }
+
+        .seperator {
+          width: 20px;
+          height: 20px;
+
+          svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--primary-color);
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: var(--border-radius);
+        box-shadow: 0 5px 25px var(--primary-color-tint-7);
+      }
+    }
+
+    p,
+    blockquote {
+      max-width: 800px;
+      margin-inline: auto;
+    }
+
+    p {
+      text-align: justify;
+      line-height: 2;
+    }
+
+    blockquote {
+      background: var(--primary-color-tint-10);
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      text-align: center;
+      font-family: 'semibold';
+    }
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@        BREAKPOINTS        @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: 1440px) {
+  .weblog-post {
+    padding-block: 2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .weblog-post {
+    .weblog-post__container {
+      gap: 1.5rem;
+
+      .title {
+        img {
+          height: 200px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .weblog-post {
+    .weblog-post__container {
+      .title {
+        .info {
+          gap: 1.5rem;
+
+          .date,
+          .time {
+            align-items: center;
+            gap: 0.5rem;
+
+            .right {
+              .icon {
+                display: block;
+                width: 20px;
+                height: 20px;
+
+                svg {
+                  width: 20px;
+                  height: 20px;
+                  fill: var(--primary-color);
+                  opacity: 0.7;
+                }
+              }
+
+              span {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
