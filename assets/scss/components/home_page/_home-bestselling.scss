@@ -21,11 +21,14 @@
           z-index: 1;
           inset: 0;
           margin: auto;
-          width: min-content;
-          height: min-content;
           display: grid;
           padding: 0.5rem;
           border-radius: 0.4rem;
+
+          width: min-content;
+          inline-size: min-content;
+          height: min-content;
+          block-size: min-content;
 
           span {
             text-align: center;
