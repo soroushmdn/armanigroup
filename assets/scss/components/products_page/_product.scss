@@ -1,0 +1,176 @@
+.product {
+  padding-top: 3rem;
+
+  .product__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+
+    figure {
+      position: relative;
+      background: radial-gradient(
+        85% 85% at 50% 50%,
+        #f8f9fc 50%,
+        #eceef7 100%
+      );
+      box-shadow: 0 0 1px var(--primary-color-tint-9);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      padding: 1.5rem;
+
+      display: grid;
+      place-items: center;
+
+      .badge {
+        position: absolute;
+        z-index: 1;
+        inset: 0;
+        margin: auto;
+        width: max-content;
+        height: max-content;
+        display: grid;
+        padding: 0.7rem;
+        border-radius: 0.5rem;
+
+        span {
+          text-align: center;
+          font-family: 'english-regular';
+          letter-spacing: 0.5px;
+        }
+      }
+
+      .badge.light {
+        background: var(--primary-color-tint-7);
+        color: var(--text-color-darker);
+      }
+
+      .badge.dark {
+        background: var(--primary-color-shade-8);
+        color: var(--text-color-light);
+      }
+
+      img {
+        width: 160px;
+        filter: drop-shadow(0 0 5px var(--primary-color-tint-8));
+      }
+    }
+
+    .data {
+      display: grid;
+
+      .title {
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.3rem;
+        border-bottom: 1px solid var(--primary-color-tint-10);
+
+        h2 {
+          color: var(--text-color-darker);
+          margin-bottom: 0.2rem;
+        }
+
+        span {
+          font-size: var(--h5-font-size);
+          font-family: 'english-regular';
+          letter-spacing: 1px;
+        }
+      }
+
+      .description {
+        text-align: justify;
+        margin-bottom: 2.5rem;
+      }
+
+      .cta {
+        align-self: flex-end;
+        padding: 1.5rem 1.4rem;
+        background: var(--primary-color-tint-10);
+        border-radius: 0.7rem;
+
+        p {
+          color: var(--primary-color-shade-9);
+        }
+      }
+    }
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@        BREAKPOINTS        @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: 1440px) {
+  .product {
+    .product__container {
+      gap: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .product {
+    .product__container {
+      gap: 2rem;
+
+      figure {
+        img {
+          width: 128px;
+        }
+      }
+
+      .data {
+        p {
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .product {
+    .product__container {
+      grid-template-columns: 1fr;
+
+      figure {
+        .badge {
+          padding: 0.5rem;
+
+          span {
+            line-height: 1;
+          }
+        }
+
+        img {
+          width: 112px;
+        }
+      }
+
+      .data {
+        .title {
+          margin-bottom: 1rem;
+        }
+
+        .description {
+          margin-bottom: 1.5rem;
+        }
+
+        .cta {
+          padding: 1.2rem 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product {
+    .product__container {
+      gap: 1.5rem;
+
+      .data {
+        .cta {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
