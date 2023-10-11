@@ -1,0 +1,142 @@
+.home-hero {
+  padding-block: 2.5rem;
+
+  .home-hero__container {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 25px var(--primary-color-tint-7);
+
+    img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .data {
+      position: absolute;
+      top: 10rem;
+      right: 4rem;
+
+      .title {
+        color: var(--text-color-lighter);
+        margin-bottom: 0.5rem;
+        text-shadow: 0 2px 10px var(--primary-color-shade-6);
+
+        span {
+          color: var(--secondary-color);
+          font-family: 'bold';
+        }
+      }
+
+      .description {
+        color: var(--text-color-light);
+        margin-bottom: 2rem;
+        width: 80%;
+        text-shadow: 0 2px 10px var(--primary-color-shade-6);
+      }
+
+      .button {
+        background: var(--primary-color-shade-7);
+        color: var(--text-color-lighter);
+        box-shadow: 0 5px 15px var(--primary-color-shade-8);
+      }
+
+      .button:hover {
+        background: var(--primary-color-shade-6);
+      }
+    }
+
+    .scroll-down {
+      background: var(--background-color);
+      position: absolute;
+      inset: auto 0 0 0;
+      margin-inline: auto;
+      width: 40px;
+      height: 40px;
+      border-radius: 0.6rem 0.6rem 0 0;
+
+      svg {
+        fill: var(--primary-color);
+      }
+    }
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@        BREAKPOINTS        @@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: 1440px) {
+  .home-hero {
+    padding-block: 2rem;
+
+    .home-hero__container {
+      img {
+        height: 512px;
+      }
+
+      .data {
+        top: 6rem;
+        right: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home-hero {
+    .home-hero__container {
+      img {
+        height: unset;
+      }
+
+      .data {
+        top: 3rem;
+        right: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home-hero {
+    .home-hero__container {
+      .data {
+        top: 1.5rem;
+        right: 1.5rem;
+
+        .description {
+          width: 65%;
+          margin-bottom: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-hero {
+    .home-hero__container {
+      img {
+        object-fit: fill;
+        aspect-ratio: 5/6;
+      }
+
+      .data {
+        top: 3rem;
+        right: 1rem;
+      }
+
+      .scroll-down {
+        width: 32px;
+        height: 32px;
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
